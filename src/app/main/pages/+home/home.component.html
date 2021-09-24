@@ -1,0 +1,27 @@
+<h2>Welcome {{user?.name}}!</h2>
+<ng-container *ngIf="!counterPieces">
+    <p>It's your first time</p>
+</ng-container>
+<ng-container *ngIf="counterPieces">
+    <small>The last time you accessed was</small>
+    <ul *ngIf="counterPieces" class="countdown">
+        <li>
+            <div class="counter">{{counterPieces.days}}</div>
+            days
+        </li>
+        <li>
+            <div class="counter">{{counterPieces.hours}}</div>
+            hours
+        </li>
+        <li>
+            <div class="counter">{{counterPieces.minutes}}</div>
+            minutes
+        </li>
+        <li>
+            <div class="counter">{{counterPieces.seconds}}</div>
+            seconds
+        </li>
+    </ul>
+</ng-container>
+
+<button mat-raised-button color="primary" (click)="signOut()">LOGOUT</button>

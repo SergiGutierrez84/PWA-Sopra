@@ -1,0 +1,24 @@
+<div class="signin-content">
+    <mat-card>
+        <mat-card-content>
+            <i class="zmdi zmdi-lock-outline"></i>
+            <form #f="ngForm" name="form" (ngSubmit)="f.form.valid && login()" autocomplete="off">
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="User" id="username" name="username" [(ngModel)]="model.username" #username="ngModel"
+                        [autofocus]="true" required>
+                    <mat-error *ngIf="f.form.get('username')?.invalid">
+                        Please inform your user name
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput type="password" id="password" placeholder="Password" name="password" [(ngModel)]="model.password"
+                        #password="ngModel" required>
+                    <mat-error *ngIf="f.form.get('password')?.invalid">
+                        Please inform your password
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Login</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

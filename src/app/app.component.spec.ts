@@ -1,0 +1,31 @@
+import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { AppComponent } from './app.component';
+
+import { AuthService } from './core/authentication/auth.service';
+import { MomentService } from './core/services/moment.service';
+
+describe('AppComponent', () => {
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [
+                RouterTestingModule
+            ],
+            declarations: [
+                AppComponent
+            ],
+            providers: [
+                AuthService,
+                MomentService
+            ],
+        }).compileComponents();
+    });
+
+    it('should create the app', () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        const app = fixture.componentInstance;
+        expect(app).toBeTruthy();
+    });
+
+});

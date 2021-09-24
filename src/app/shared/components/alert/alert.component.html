@@ -1,0 +1,17 @@
+﻿<div class="divSmallBoxes" *ngIf="messages">
+    <div *ngFor="let message of messages" [@slideToLeft]
+        [ngClass]="['SmallBox alert', getDismissClass(message.options.clear), getTypeClass(message.type)]" (click)="(message.options.clear !== false) ? removeAlert(message) : null">
+        <div class="icon">
+            <i [ngClass]="[message.icon, 'zmdi-hc-lg']"></i>
+        </div>
+        <div>
+            <span class="alert-heading"> {{message.title}}</span>
+            <button *ngIf="message.options.clear === false" type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="removeAlert(message)"><span aria-hidden="true">&times;</span></button>
+            <p class="message-description">
+                {{ message.text }}
+                <a *ngIf="message.options" class="alert-link" routerLink="{{ message.options.urlLink }}" [queryParams]="message.options.queryParams"> {{ message.options.link }}</a>
+            </p>
+        </div>
+        <div class="miniIcon"></div>
+    </div>
+</div>

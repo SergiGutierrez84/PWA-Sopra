@@ -1,0 +1,13 @@
+<div [ngSwitch]="options.icon">
+    <div *ngSwitchCase="'Error'" class="icon error">X</div>
+    <div *ngSwitchCase="'Exclamation'" class="icon information">i</div>
+    <div *ngSwitchCase="'Information'" class="icon information">i</div>
+    <div *ngSwitchCase="'Question'" class="icon question">?</div>
+    <div *ngSwitchCase="'Warning'" class="icon warning">!</div>
+    <h2 class="title" >{{ title }}</h2>
+    <span class="content" [innerHTML]="message"></span>
+</div>
+<div class="container-buttons">
+    <button mat-raised-button color="primary" [mat-dialog-close]=true>Ok</button>
+    <button mat-raised-button mat-dialog-close>{{ 'Cancelar' }}</button>
+</div>

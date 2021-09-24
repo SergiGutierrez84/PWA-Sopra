@@ -1,0 +1,152 @@
+:host{
+    .alert {
+        padding: 3px;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        .alert-heading {
+            color: inherit;
+        }
+        .message-description {
+            width: 90%;
+        }
+        .alert-link {
+            font-weight: 500;
+        }
+        &.alert-dismissible .close {
+            position: relative;
+            top: -18px;
+            right: -24px;
+            padding: 3px;
+            color: inherit;
+            & > span:not(.sr-only) {
+                color: #230000;
+                font-weight: bold;
+                opacity: 1;
+                font-size: 1.5rem;
+              }
+        }
+        &.alert-success {
+            background-color: #57d59f;
+            border-color: #57d59f;
+            color: #FFFFFF;
+            hr {
+                border-top-color: #43d093;
+            }
+        }
+        &.alert-info {
+            background-color: #2ebcfc;
+            border-color: #2ebcfc;
+            color: #FFFFFF;
+            hr {
+                border-top-color: #14b4fc;
+              }
+        }
+        &.alert-ligth {
+            background-color: #fff;
+            border-color: #666!important;
+            color: #666!important;
+            hr {
+                border-top-color: #fff;
+              }
+        }
+        &.alert-warning {
+            background-color: #ffc721;
+            border-color: #ffc721;
+            color: #FFFFFF;
+            .alert-warning hr {
+                border-top-color: #ffc107;
+            }
+        }
+        &.alert-danger {
+            background-color: #ff6f6c;
+            border-color: #ff6f6c;
+            color: #FFFFFF;
+            hr {
+                border-top-color: #ff5652;
+            }
+        }
+    }
+    .divSmallBoxes {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 9999;
+        .SmallBox {
+            display: flex;
+            // position: initial;
+            margin: 10px;
+            width: 500px;
+            color: #fff;
+            overflow: hidden;
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px solid #fff;
+                cursor: pointer;
+            }
+            .icon {
+                width: 55px;
+                font-size: 45px;
+                margin-left: 10px;
+                .zmdi {
+                    vertical-align: -30%;
+                }
+            }
+            .textoFull {
+                width: 93%;
+                float: left;
+                padding-left: 20px;
+            }
+            .textoFoto {
+                width: 78%;
+                margin: 3px 20px 3px 20px;
+                float: left
+            }
+            span {
+                display: block;
+                margin: 4px 0
+            }
+            p {
+                font-size: 13px;
+                margin-top: 2px
+            }
+            .miniPic {
+                position: absolute;
+                bottom: 8px;
+                right: 9px;
+            }
+            .miniIcon {
+                height: 100%;
+                font-size: 20px;
+            }
+        }
+    }
+    @media screen and (max-width:500px) and (max-width:767px) {
+        .divSmallBoxes {
+            position: fixed;
+            width: 90%;
+            right: 0;
+            top: 0;
+            .SmallBox {
+                width: 95%;
+                &:hover {
+                    box-shadow: 0 0 10px #888;
+                    cursor: pointer;
+                }
+                p {
+                    font-size: 12px;
+                    margin-top: 2px;
+                }
+                .textoFull {
+                    width: 93%;
+                    float: left;
+                    padding-left: 20px;
+                }
+                .textoFoto {
+                    width: 55%;
+                    float: left;
+                }
+            }
+        }
+    }
+}

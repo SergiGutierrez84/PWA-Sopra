@@ -1,0 +1,85 @@
+:host {
+    .title {
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 1;
+        color: #333;
+        line-height: inherit;
+        margin: 0 0 5px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: none;
+        padding: 0;
+        display: block;
+        word-wrap: break-word;
+    }
+    .content {
+        display: block;
+        color: #9c9c9c;
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-align: center;
+        position: relative;
+        float: none;
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+        word-wrap: break-word;
+    }
+    .icon {
+        width: 80px;
+        height: 80px;
+        border: 4px solid transparent;
+        border-radius: 50%;
+        margin: 0 auto 1.5rem;
+        padding: 0;
+        position: relative;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        &.question {
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            color: #87adbd;
+            border-color: #c9dae1;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center;
+        }
+        &.information {
+            font-family: 'Open Sans',sans-serif;
+            color: #3fc3ee;
+            border-color: #9de0f6;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center;
+        }
+        &.warning{
+            font-family: 'Open Sans',sans-serif;
+            color: #f8bb86;
+            border-color: #facea8;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center;
+        }
+        &.error{
+            font-family: 'Open Sans',sans-serif;
+            color: #f44336;
+            border-color: #f58981;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center;
+        }
+    }
+    .container-buttons {
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+        button {
+            margin: 0 3px;
+        }
+    }
+}
